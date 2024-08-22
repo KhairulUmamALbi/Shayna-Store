@@ -12,20 +12,23 @@
                                     <li class="w-icon active">
                                         <a href="#"><i class="icon_bag_alt"></i></a>
                                     </li>
-                                    <li class="quick-view"><a href="product.html">+ Quick View</a></li>
+                                    <li class="quick-view"><router-link to="/product">+ Quick View</router-link></li>
                                 </ul>
                             </div>
                             <div class="pi-text">
                                 <div class="catagory-name">Coat</div>
+                                <router-link to="/product">
                                 <a href="#">
                                     <h5>Mickey Baggy</h5>
                                 </a>
+                            </router-link>
                                 <div class="product-price">
                                     $14.00
                                     <span>$35.00</span>
                                 </div>
                             </div>
                         </div>
+
                         <div class="product-item">
                             <div class="pi-pic">
                                 <img src="img/products/women-2.jpg" alt="" />
@@ -106,6 +109,7 @@
             </div>
         </div>
     </section>
+    
     <!-- Women Banner Section End -->
 </template>
 
