@@ -1,4 +1,4 @@
-# shayna
+# shayna - Vue.js 2
 
 ## Project setup
 ```
@@ -19,6 +19,15 @@ npm run build
 ```
 npm run lint
 ```
+### Vue Ui
+
+```
+vue ui
+```
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+
+
+
+
