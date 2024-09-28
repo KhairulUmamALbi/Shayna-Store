@@ -3,7 +3,7 @@
 
         <section>
             <div class="hero-section">
-            <carousel  class="hero-items" :items="1" :nav="false">
+            <carousel  class="hero-items" :autoplay="false" :loop="false" :items="1" :nav="false">
                 <div class="single-hero-items set-bg" style="background-image: url('/img/hero-1.jpg');">
                     <div class="container">
                         <div class="row">
