@@ -25,12 +25,12 @@
             <div class="row">
               <div class="col-lg-6">
                 <div class="product-pic-zoom">
-                  <img class="product-big-img" :src="gambar_default" alt="" />
+                  <img class="product-big-img" :src="gambar_default" alt="" v-lazy-load />
                 </div>
                 <div class="product-thumbs" v-if="productDetails.galleries.length> 0">
                   <carousel :autoplay="false" :loop="false" :dots="false" :nav="false" class="product-thumbs-track ps-slider ">
                     <div v-for="ss in productDetails.galleries" :key="ss.id" 
-                    class="pt" @click="changeImage(ss.photo)" 
+                    class="pt" v-lazy-load @click="changeImage(ss.photo)" 
                     :class="ss.photo == gambar_default ? 'active' : '' ">
                       <img :src="ss.photo" alt="" />
                     </div>
@@ -74,7 +74,7 @@ import HeaderShayna from '@/components/HeaderShayna.vue';
 import FooterShayna from '@/components/FooterShayna.vue';
 import RelatedShayna from '@/components/ProductComponents/RelatedShayna.vue';
 import carousel from 'vue-owl-carousel';
-
+import Vue from 'vue';
 import axios from 'axios';
 
 export default {
@@ -127,7 +127,7 @@ export default {
           }
         }
         axios
-            .get('http://shayna-backend.albikhairul.site/api/product', {
+            .get('https://shayna-backend.albikhairul.site/api/product', {
                 params: {
                     id: this.$route.params.id
                 }
@@ -139,7 +139,26 @@ export default {
             });
     }
 }
+// Lazy load directive
+Vue.directive('lazy-load', {
+  inserted: function (el) {
+    const loadImage = () => {
+      el.src = el.dataset.src;
+      el.classList.add('loaded'); // Optional: Add a class for styling loaded images
+      observer.disconnect();
+    };
 
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          loadImage();
+        }
+      });
+    });
+
+    observer.observe(el);
+  },
+});
 </script>
 
 <style scoped>

@@ -78,7 +78,7 @@ export default {
     mounted() {
 
         axios
-            .get('http://shayna-backend.albikhairul.site/api/product')
+            .get('https://shayna-backend.albikhairul.site/api/product')
             .then(response => {this.product = response.data.data.data;})
             .catch(error => {console.log(error);
             });
