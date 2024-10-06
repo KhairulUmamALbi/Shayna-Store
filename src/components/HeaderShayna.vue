@@ -6,10 +6,10 @@
             <div class="container">
                 <div class="ht-left">
                     <div class="mail-service">
-                        <i class=" fa fa-envelope"></i> hello.shayna@gmail.com
+                        <i class=" fa fa-envelope"></i> hello.e-commerce@gmail.com
                     </div>
                     <div class="phone-service">
-                        <i class=" fa fa-phone"></i> +628 22081996
+                        <i class=" fa fa-phone"></i> +628 0000000
                     </div>
                 </div>
             </div>
@@ -21,6 +21,7 @@
                         <div class="logo">
                             <a href="./index.html">
                                 <img src="img/logo_website_shayna.png" alt="" />
+                                 <!-- <h3>Shayna</h3> -->
                             </a>
                         </div>
                     </div>

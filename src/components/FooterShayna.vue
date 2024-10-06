@@ -9,8 +9,8 @@
                             <a href="#"><img src="img/logo_website_shayna_white.png" alt="" /></a>
                         </div>
                         <ul>
-                            <li>Address: Setra Duta, Bandung</li>
-                            <li>Phone: +628 22081996</li>
+                            <li>Address: Banda Aceh, Aceh</li>
+                            <li>Phone: +628 000000</li>
                             <li>Email: hello.shayna@gmail.com</li>
                         </ul>
                         <div class="footer-social">

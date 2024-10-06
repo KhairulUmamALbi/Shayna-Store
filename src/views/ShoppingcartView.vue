@@ -166,7 +166,7 @@ export default {
         };
 
         axios
-            .post('http://localhost:8000/api/checkout', checkoutData)
+            .post('http://shayna-backend.albikhairul.site/api/checkout', checkoutData)
             .then(() => this.$router.push('SUCCESS'))
             // eslint-disable-next-line no-console
             .catch(err => console.log(err));  
